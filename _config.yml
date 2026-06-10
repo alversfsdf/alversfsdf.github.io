@@ -2,7 +2,7 @@
 title: Robert Baur
 description: Street Photography
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "alversfsdf.github.io" # the base hostname & protocol for your site
+url: "https://www.alversfsdf.github.io" # the base hostname & protocol for your site
 author: Robert Baur
 
 # Collection settings
