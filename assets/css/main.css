@@ -1059,6 +1059,12 @@
                 opacity: 0;
             }
 
+            #viewer .slide {
+                            display: flex !important;
+                            justify-content: center !important;
+                            align-items: center !important;
+            }
+
 
             #viewer .slide:before {
                 animation: spinner 1s linear infinite;
