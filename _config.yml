@@ -8,6 +8,7 @@ author: Robert Baur
 # Collection settings
 collections:
   photos:
+    output: true
 
 # Social settings
 500px_url:
