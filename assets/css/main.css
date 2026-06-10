@@ -842,38 +842,47 @@
 				}
 
 /* Thumbnails */
+/* Thumbnails */
 
-	#thumbnails {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		padding: 0 0.75em;
-	}
+    #thumbnails {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 0.75em;
+    }
 
-		#thumbnails article {
-			position: relative;
-			width: 50%;
-			background: #101010;
-			outline: 0;
-		}
+        #thumbnails article {
+            position: relative;
+            width: 50%;
+            background: #101010;
+            outline: 0;
+            height: 200px; /* 1. Forces EVERY grid cell to be the exact same height */
+            overflow: hidden; /* 2. Keeps anything extra safely hidden */
+        }
 
-			#thumbnails article .thumbnail {
-				-webkit-tap-highlight-color: transparent;
-				display: block;
-				position: relative;
-				border: 0;
-				outline: 0;
-			}
+            #thumbnails article .thumbnail {
+                -webkit-tap-highlight-color: transparent;
+                display: block;
+                position: relative;
+                border: 0;
+                outline: 0;
+                width: 100%;
+                height: 100%; /* 3. Makes the link fill the box */
+            }
 
-				#thumbnails article .thumbnail img {
-					display: block;
-					width: 100%;
-				}
+                #thumbnails article .thumbnail img {
+                    display: block;
+                    width: 100%;
+                    height: 100%; /* 4. Force image to match container height */
+                    object-fit: cover; /* 5. Magic crop, no distortion */
+                    object-position: center;
+                }
+	
 
 				#thumbnails article .thumbnail:before {
 					-moz-pointer-events: none;
