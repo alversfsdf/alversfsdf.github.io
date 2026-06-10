@@ -1050,15 +1050,15 @@
                 transition: opacity 0.5s ease-in-out;
                 position: absolute;
                 top: 0;
-                left: 50%;                     /* Centers the container horizontally */
-                transform: translateX(-50%);    /* Offsets it by half its width to perfectly align */
-                width: 100%;
+                left: 0;                         /* Reset back to 0 */
+                width: 100%;                     /* Keep container matching full screen width */
                 height: 100%;
                 background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;    /* Centers the background image asset inside the container */
+                background-size: contain;        /* Keeps the portrait image uncropped */
+                background-position: center center !important; /* Forces the browser to anchor the asset directly in the middle */
                 opacity: 0;
             }
+
 
             #viewer .slide:before {
                 animation: spinner 1s linear infinite;
