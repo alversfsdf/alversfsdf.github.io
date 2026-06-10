@@ -1111,18 +1111,20 @@
 				}
 
 			#viewer .slide .image {
-				-moz-transition: opacity 0.5s ease-in-out;
-				-webkit-transition: opacity 0.5s ease-in-out;
-				-ms-transition: opacity 0.5s ease-in-out;
-				transition: opacity 0.5s ease-in-out;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-repeat: no-repeat;
-				background-size: cover;
-				opacity: 0;
+			    -moz-transition: opacity 0.5s ease-in-out;
+			    -webkit-transition: opacity 0.5s ease-in-out;
+			    -ms-transition: opacity 0.5s ease-in-out;
+			    transition: opacity 0.5s ease-in-out;
+			    position: absolute;
+			    top: 0;
+			    left: 50%;                 /* 1. Move the left edge to the exact middle of the screen */
+			    transform: translateX(-50%); /* 2. Shift the image back left by half its own width */
+			    width: 100%;
+			    height: 100%;
+			    background-repeat: no-repeat;
+			    background-size: contain;
+			    background-position: center;
+			    opacity: 0;
 			}
 
 			#viewer .slide:before {
