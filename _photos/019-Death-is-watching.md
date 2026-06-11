@@ -1,5 +1,5 @@
 ---
-title: Death is watching
+title: Death is Watching
 image: assets/images/fulls/SPP19.jpg
 thumbnail: assets/images/thumbs/SPP19.jpg
 caption: Apr 28, 2026
